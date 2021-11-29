@@ -16,7 +16,7 @@ public class Game {
 
     public void playBall() {
 
-        String guess = userInput();
+        String guess = readUserInput();
         Pitch pitch = new Pitch(guess);
         lastScore = new Score(pitch, target);
         System.out.println(lastScore);
@@ -26,7 +26,7 @@ public class Game {
         return lastScore.getStrike() == NUMBER_OF_BALLS;
     }
 
-    private String userInput() {
+    private String readUserInput() {
 
         while (true) {
             System.out.printf("0이 포함되지 않은 %d자리 정수를 입력하세요: ", NUMBER_OF_BALLS);
